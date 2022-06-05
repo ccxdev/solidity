@@ -1,0 +1,17 @@
+{
+    "name": "ethereum-learning",
+    "version": "1.0.0",
+    "scripts": {
+        "lint": "eslint --fix"
+    },
+    "author": "ccxdev",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+        "@babel/eslint-parser": "^7.18.2",
+        "eslint": "^8.17.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-mocha": "^10.0.5",
+        "eslint-plugin-prettier": "^4.0.0"
+    }
+}

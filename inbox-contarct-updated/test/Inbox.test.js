@@ -35,9 +35,7 @@ describe("Inbox", function () {
     });
 
     it("Is setMessage change message field", async function () {
-        const tx = await inbox.methods.setMessage("Hola, Javascript").send({ from: accounts[0] });
-
-        console.log(tx);
+        await inbox.methods.setMessage("Hola, Javascript").send({ from: accounts[0] });
 
         const message = await inbox.methods.message().call();
 

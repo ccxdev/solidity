@@ -2,6 +2,7 @@ module.exports = {
     env: {
         node: true,
     },
+    root: true,
     parserOptions: {
         ecmaVersion: "latest",
         sourceType: "module",
