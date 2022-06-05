@@ -1,7 +1,8 @@
 {
-    "name": "inbox-contract",
+    "name": "inbox-contract-updated",
     "version": "1.0.0",
-    "main": "deploy.js",
+    "description": "",
+    "main": "index.js",
     "scripts": {
         "test": "mocha",
         "compile": "node ./compile.js"
@@ -13,7 +14,14 @@
         "dotenv": "^16.0.1",
         "ganache-cli": "^6.12.2",
         "mocha": "^10.0.0",
-        "solc": "^0.4.17",
+        "solc": "^0.8.9",
         "web3": "^1.7.3"
+    },
+    "devDependencies": {
+        "@babel/eslint-parser": "^7.18.2",
+        "eslint": "^8.17.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-mocha": "^10.0.5",
+        "eslint-plugin-prettier": "^4.0.0"
     }
 }

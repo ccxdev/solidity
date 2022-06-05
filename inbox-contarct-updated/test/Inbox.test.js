@@ -3,7 +3,7 @@ const ganache = require("ganache-cli");
 const Web3 = require("web3");
 
 const web3 = new Web3(ganache.provider());
-const { interface: abi, bytecode } = require("../compile");
+const { abi, evm } = require("../compile");
 
 describe("Inbox", function () {
     let accounts;
@@ -12,9 +12,9 @@ describe("Inbox", function () {
     beforeEach(async function () {
         accounts = await web3.eth.getAccounts();
 
-        inbox = await new web3.eth.Contract(JSON.parse(abi))
+        inbox = await new web3.eth.Contract(abi)
             .deploy({
-                data: bytecode,
+                data: evm.bytecode.object,
                 arguments: ["Hi there!"],
             })
             .send({ from: accounts[0], gas: "1000000" });
@@ -35,7 +35,9 @@ describe("Inbox", function () {
     });
 
     it("Is setMessage change message field", async function () {
-        await inbox.methods.setMessage("Hola, Javascript").send({ from: accounts[0] });
+        const tx = await inbox.methods.setMessage("Hola, Javascript").send({ from: accounts[0] });
+
+        console.log(tx);
 
         const message = await inbox.methods.message().call();
 
