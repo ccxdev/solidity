@@ -1,0 +1,27 @@
+{
+    "name": "inbox-ethereum",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha",
+        "compile": "node ./compile.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@truffle/hdwallet-provider": "^1.7.0",
+        "dotenv": "^16.0.1",
+        "ganache-cli": "^6.12.2",
+        "mocha": "^10.0.0",
+        "solc": "^0.4.17",
+        "web3": "^1.7.3"
+    },
+    "devDependencies": {
+        "@babel/eslint-parser": "^7.18.2",
+        "eslint": "^8.17.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-mocha": "^10.0.5",
+        "eslint-plugin-prettier": "^4.0.0"
+    }
+}
