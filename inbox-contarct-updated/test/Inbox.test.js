@@ -24,7 +24,7 @@ describe("Inbox", function () {
         assert.equal(Array.isArray(accounts) && accounts.length >= 1, true);
     });
 
-    it("Check is contract deployed", function () {
+    it("Contract deployed", function () {
         assert.ok(inbox.options.address);
     });
 
