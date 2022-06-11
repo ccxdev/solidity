@@ -31,4 +31,12 @@ describe("Lottery", function () {
 
         assert.equal(message, accounts[0]);
     });
+
+    it("Enter to lottery", async function () {
+        await lottery.methods.enter().send({ from: accounts[1], value: "100000000000000" });
+
+        const players = await lottery.methods.getPlayers().call();
+
+        assert.equal(players[0], accounts[1]);
+    });
 });
